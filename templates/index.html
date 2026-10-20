@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Agent Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <h1>Multi-Agent Assistant</h1>
+      </header>
+
+      <main class="chat-panel">
+        <div id="conversation" class="conversation" aria-live="polite">
+          <div class="message bot">
+            <p>Hello! Ask me anything and I’ll route it to the right specialist agent.</p>
+          </div>
+        </div>
+
+        <form id="chat-form" class="chat-form">
+          <textarea
+            id="query"
+            rows="3"
+            placeholder="Ask a question, request research, do math, or inspect Python code..."
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

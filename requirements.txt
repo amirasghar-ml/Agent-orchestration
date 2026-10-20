@@ -1,0 +1,6 @@
+python-dotenv
+pydantic
+langchain-openai
+langchain-core
+langgraph
+flask
